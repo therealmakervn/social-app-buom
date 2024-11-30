@@ -1,7 +1,7 @@
 [build]
 builder = "nixpacks"
-buildCommand = "go build -v -tags timetzdata -o bskyweb ./cmd/bskyweb"
+buildCommand = "cd bskyweb && go build -v -tags timetzdata -o bskyweb ./cmd/bskyweb"
 
 [deploy]
-startCommand = "./bskyweb serve --http-address=0.0.0.0:$PORT --appview-host=https://public.api.bsky.app"
+startCommand = "cd bskyweb && ./bskyweb serve --http-address=0.0.0.0:$PORT --appview-host=https://public.api.bsky.app"
 restartPolicyType = "ON_FAILURE"
