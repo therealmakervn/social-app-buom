@@ -74,7 +74,7 @@ ENTRYPOINT ["dumb-init", "--"]
 WORKDIR /bskyweb
 COPY --from=build-env /bskyweb /usr/bin/bskyweb
 
-CMD ["/usr/bin/bskyweb", "serve", "--http-address=0.0.0.0:$PORT", "--appview-host=https://public.api.bsky.app"]
+CMD ["/usr/bin/bskyweb", "serve", "--http-address", "0.0.0.0:${PORT}", "--appview-host=https://public.api.bsky.app"]
 
 LABEL org.opencontainers.image.source=https://github.com/bluesky-social/social-app
 LABEL org.opencontainers.image.description="bsky.app Web App"
