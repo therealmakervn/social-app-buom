@@ -62,7 +62,7 @@ export async function createServer(
   const port = 3000
   const port2 = await getPort(port + 1)
   const port3 = await getPort(port2 + 1)
-  const pdsUrl = `http://localhost:${port}`
+  const pdsUrl = "https://atproto-socialnetwork-production.up.railway.app"
   const id = ids.next()
 
   const testNet = await TestNetwork.create({
